@@ -1,0 +1,1 @@
+this repository is alx-low_level_programming and it is going to be used to work on C projects.
