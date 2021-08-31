@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  *main- prints Holberton, followed by a new line
  *Return:always 0 (Success)
