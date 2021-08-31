@@ -7,9 +7,9 @@
 int main(void)
 {
 int i = 0;
-char msg[] = "Holberton\n";
+char msg[] = "_putchar\n";
 char c;
-while (i <= 9)
+while (i <= 8)
 {
 c = msg[i];
 _putchar(c);
