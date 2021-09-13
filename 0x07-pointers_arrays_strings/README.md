@@ -8,3 +8,4 @@ file 7: a function that prints the chessboard.
 file 8:a function that prints the sum of the two diagonals of a square matrix of integers.
 file 100:a function that sets the value of a pointer to a char.
 file 101:a file that contains the password for the crackme2 executable.
+main.h:is the header file which containf all the function prototypes used in this project.
