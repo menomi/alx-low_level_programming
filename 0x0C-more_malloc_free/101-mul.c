@@ -22,6 +22,7 @@ int *int_calloc(int nmemb, unsigned int size)
 	for (n = 0; n < nmemb; n++)
 		p[n] = 0;
 	return (p);
+	free(p);
 }
 
 /**
@@ -62,6 +63,7 @@ void mul(int *mul, char *num1, char *num2, int len1, int len2)
 	for (; i < len1 + len2; i++)
 		_putchar(mul[i] + '0');
 	_putchar('\n');
+	free(mul);
 }
 
 /**
