@@ -2,52 +2,34 @@
 #include <stdlib.h>
 
 /**
-  * string_nconcat - concatenates two strings
-  * @s1: first string to copy
-  * @s2: second string to copy
-  * @n: number of bytes of s2 to copy
-  *
-  * Return: pointer to new char
-  */
-
+ * string_nconcat - concatenates two strings
+ * @s1: destination string
+ * @s2: source string
+ * @n: number of bytes from s2 to be copied
+ * Return: concatenated string
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int size1 = 0, size2 = 0, i;
+	unsigned int t1, t2, i;
 
 	if (s1 == NULL)
-		s1 = "";
-
+		t1 = 0;
+	for (t1 = 0; s1[t1]; ++t1)
+		;
 	if (s2 == NULL)
-		s2 = "";
-
-	while (s1[size1] != '\0')
-	{
-		size1++;
-	}
-
-	while (s2[size2] != '\0')
-	{
-		size2++;
-	}
-
-	if (n > size2)
-	n = size2;
-	p = malloc((size1 + n + 1) * sizeof(char));
-
+		t2 = 0;
+	for (t2 = 0; s2[t2]; ++t2)
+		;
+	if (t2 > n)
+		t2 = n;
+	p = malloc((t1 + t2 + 1) * sizeof(char));
 	if (p == NULL)
-		return (0);
-
-	for (i = 0; i < size1; i++)
-	{
+		return (NULL);
+	for (i = 0; i < t1; i++)
 		p[i] = s1[i];
-	}
-
-	for (; i < (size1 + n); i++)
-	{
-		p[i] = s2[i - size1];
-	}
-	p[i] = '\0';
-
-return (p);
+	for (i = 0; i < t2; i++)
+		p[t1 + i] = s2[i];
+	p[t1 + t2] = '\0';
+	return (p);
 }
