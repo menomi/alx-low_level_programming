@@ -1,15 +1,12 @@
-#include <stdio.h>
 #include "main.h"
-#include <unistd.h>
-#include <stdlib.h>
+
 /**
- * main - Copies the content of a file to another file.
- * @ac: Argument count
- * @av: argument values
- * Return: 0 on succes, -1 on error.
+ * main - a program that displays the information contained 
+ * in the ELF header at the start of an ELF file.
+ * Return: nothing 
  */
-int main(int ac, char *av[])
+
+int main(char argc, int *argv[])
 {
-return (1);
-return (0);
+	return (0);
 }
